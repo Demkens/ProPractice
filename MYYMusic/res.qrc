@@ -2,5 +2,7 @@
     <qresource prefix="/img">
         <file>Resources/title/mini.png</file>
         <file>Resources/title/close.png</file>
+        <file>Resources/title/max.png</file>
+        <file>Resources/title/min.png</file>
     </qresource>
 </RCC>

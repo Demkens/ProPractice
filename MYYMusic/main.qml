@@ -55,13 +55,15 @@ Window {
 
             Row {
                 id:miniRow
-                spacing: 15
+                spacing: 0
                 anchors.verticalCenter: parent.verticalCenter
                 anchors.right: parent.right
                 anchors.rightMargin: 0.02 * window.width
                 // 窗口按钮
                 Image {
                     id: miniImg
+                    width: 32; height: 32
+                    sourceSize.width: 128; sourceSize.height: 128
                     anchors.verticalCenter: parent.verticalCenter
                     source: "qrc:/img/Resources/title/mini.png"
                     layer.enabled: false
@@ -85,19 +87,27 @@ Window {
                     }
                 }
                 // 最小化按钮
-                Rectangle {
-                    width: 15; height: 2
-                    color: "#75777f"
+                Image {
+                    id: minImg
+                    width: 32; height: 32
+                    sourceSize.width: 128; sourceSize.height: 128
                     anchors.verticalCenter: parent.verticalCenter
+                    source: "qrc:/img/Resources/title/min.png"
+                    layer.enabled: false
+                    layer.effect: MultiEffect {
+                        colorizationColor: "white"
+                        colorization: 1.0
+                        brightness: 0.5  // 增加亮度补偿
+                    }
 
                     MouseArea {
                         anchors.fill: parent
                         hoverEnabled: true
                         onEntered: {
-                            parent.color = "white"
+                            minImg.layer.enabled = true
                         }
                         onExited: {
-                            parent.color = "#75777f"
+                            minImg.layer.enabled = false
                         }
                         onClicked: {
                             window.showMinimized()
@@ -105,22 +115,27 @@ Window {
                     }
                 }
                 // 最大化按钮
-                Rectangle {
-                    width: 15; height: width
-                    radius: 2
-                    border.width: 2
-                    border.color: "#75777f"
-                    color: "transparent"
+                Image {
+                    id: maxImg
+                    width: 32; height: 32
+                    sourceSize.width: 128; sourceSize.height: 128
                     anchors.verticalCenter: parent.verticalCenter
+                    source: "qrc:/img/Resources/title/max.png"
+                    layer.enabled: false
+                    layer.effect: MultiEffect {
+                        colorizationColor: "white"
+                        colorization: 1.0
+                        brightness: 0.5  // 增加亮度补偿
+                    }
 
                     MouseArea {
                         anchors.fill: parent
                         hoverEnabled: true
                         onEntered: {
-                            parent.border.color = "white"
+                            maxImg.layer.enabled = true
                         }
                         onExited: {
-                            parent.border.color = "#75777f"
+                            maxImg.layer.enabled = false
                         }
                         onClicked: {
                             window.showMaximized()
@@ -130,6 +145,8 @@ Window {
                 // 关闭按钮
                 Image {
                     id: closeImg
+                    width: 32; height: 32
+                    sourceSize.width: 128; sourceSize.height: 128
                     anchors.verticalCenter: parent.verticalCenter
                     source: "qrc:/img/Resources/title/close.png"
 
