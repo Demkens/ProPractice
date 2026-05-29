@@ -1,11 +1,21 @@
-QT += quick
+QT += qml quick
 
 SOURCES += \
         main.cpp
 
-resources.files = main.qml 
+resources.files =
+
 resources.prefix = /$${TARGET}
+
+DISTFILES += \
+    src/commonUI/MYYWindow.qml \
+    src/playMusic/PlayMusic.qml \
+    src/rightPage/RightPage.qml \
+    src/leftPage/LeftPage.qml \
+    main.qml
+
 RESOURCES += resources \
+    qml.qrc \
     res.qrc
 
 # Additional import path used to resolve QML modules in Qt Creator's code model
