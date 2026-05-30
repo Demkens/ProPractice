@@ -4,5 +4,10 @@
         <file>Resources/title/close.png</file>
         <file>Resources/title/max.png</file>
         <file>Resources/title/min.png</file>
+        <file>Resources/title/user.png</file>
+        <file>Resources/title/arrow.png</file>
+        <file>Resources/title/message.png</file>
+        <file>Resources/title/setting.png</file>
+        <file>Resources/title/skin.png</file>
     </qresource>
 </RCC>

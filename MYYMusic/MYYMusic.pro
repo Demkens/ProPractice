@@ -12,7 +12,8 @@ DISTFILES += \
     src/playMusic/PlayMusic.qml \
     src/rightPage/RightPage.qml \
     src/leftPage/LeftPage.qml \
-    main.qml
+    main.qml \
+    src/title/MinAndMax.qml
 
 RESOURCES += resources \
     qml.qrc \
