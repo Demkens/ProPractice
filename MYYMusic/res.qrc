@@ -9,5 +9,7 @@
         <file>Resources/title/message.png</file>
         <file>Resources/title/setting.png</file>
         <file>Resources/title/skin.png</file>
+        <file>Resources/title/record.png</file>
+        <file>Resources/title/search.png</file>
     </qresource>
 </RCC>

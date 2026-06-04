@@ -13,7 +13,8 @@ DISTFILES += \
     src/rightPage/RightPage.qml \
     src/leftPage/LeftPage.qml \
     main.qml \
-    src/title/MinAndMax.qml
+    src/title/MinAndMax.qml \
+    src/title/UserCommonSetting.qml
 
 RESOURCES += resources \
     qml.qrc \
